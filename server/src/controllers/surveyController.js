@@ -1,10 +1,10 @@
-const { sequelize, Responses } = require('../models/response');
+const { sequelize, Response } = require('../models/responseModels');
 
 async function createResponse(req, res) {
   try {
     const { full_name, email, birth_date, country_of_origin, terms_and_conditions } = req.body;
 
-    const response = await Responses.create({
+    const response = await Response.create({
       full_name,
       email,
       birth_date,
@@ -23,7 +23,7 @@ async function createResponse(req, res) {
 
 async function getResponses(req, res) {
     try {
-      const responses = await Responses.findAll();
+      const responses = await Response.findAll();
   
       res.status(200).json(responses);
     } catch (error) {
@@ -32,5 +32,5 @@ async function getResponses(req, res) {
     }
   }
   
-  module.exports = { createResponse, getResponses, createResponse };
+  module.exports = { createResponse, getResponses };
   

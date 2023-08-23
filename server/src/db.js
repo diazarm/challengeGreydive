@@ -1,22 +1,21 @@
 const { Sequelize, DataTypes } = require('sequelize');
-const Response = require("../src/models/response")
-const User = require("../src/models/users")
+const responseModels = require("../src/models/responseModels")
+const usersModels = require("../src/models/usersModels")
 require("dotenv").config();
 
 const { DB_USER, DB_PASSWORD, DB_HOST, DB_NAME } = process.env;
 
-const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}`, { logging: false });
+ //const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}`,{logging:false});
+ 
+ const sequelize = new Sequelize('postgres://postgres:Mm48536804@localhost:5432/encuesta',{logging:false});
 
-// Define los modelos y las relaciones
-const models = {
-  User: User.init(sequelize, DataTypes),
-  Response: Response.init(sequelize, DataTypes),
-};
-
+ // Define los modelos y las relaciones
+usersModels(sequelize);
+responseModels(sequelize);
 // Define las asociaciones directamente en los modelos
-User.associate(models);
-Response.associate(models);
+const {User, Response} = sequelize.models;
 
-module.exports = {
-    sequelize, models
-};
+User.hasMany(Response);
+Response.belongsTo(User);
+
+module.exports={sequelize, ...sequelize.models};
