@@ -1,4 +1,4 @@
-const { sequelize, Response } = require('../models/responseModels');
+const { sequelize, Response } = require('../db');
 
 async function createResponse(req, res) {
   try {

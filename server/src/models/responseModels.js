@@ -12,7 +12,7 @@ module.exports = (sequelize) =>{
       allowNull: false,
     },
     birth_date: {
-      type: DataTypes.DATE,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     country_of_origin: {
