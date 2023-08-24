@@ -1,0 +1,56 @@
+.div {
+  background-image: url("../../assets/formulario.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: grid;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome{
+    color: rgb(132, 99, 11);
+    text-shadow: 23px 12px 32px 45px #121502;
+    font-size: 90px;    
+    margin-left: 50px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.text{
+    color: rgb(72, 55, 8);
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: -25%;
+    width: 45%;
+    margin-left: 35%;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.home{
+    width: 45%;
+    max-width: 230px;
+    font-size: 20px; 
+    background: none;
+    padding: 10px ; 
+    border: 1px solid rgb(235, 206, 206);
+    outline: 2px solid #5b3b04;
+    text-shadow: 10 10 30px #bbd210;
+    color: #5b3b04;
+    margin-left: 1020px;
+    border-radius: 15px;
+}
+
+.home:hover{
+    color: #fc6a08;
+    cursor: pointer; 
+}
+
+h3{
+    color: rgb(48, 11, 11);
+    text-shadow: 0 0 2px #6a7242;
+    font-size: 22px;
+    margin-bottom: 0%;
+    margin-left: 10px;
+}
