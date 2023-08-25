@@ -29,8 +29,7 @@ function Home() {
     event.preventDefault();
     try {
       await axios.post('http://localhost:3001/responses', formData);
-      console.log('Form submitted successfully');
-      // Actualizar la lista después del envío
+      console.log('Form submitted');
       fetchSurveyData();
     } catch (error) {
       console.error('Error submitting survey:', error);
