@@ -115,6 +115,7 @@ function Home() {
               <h3>Full Name: {response.full_name}</h3>
               <h3>Id number: {response.id}</h3>
               <p>Email: {response.email}</p>
+              <p>Birth Date: {new Date(response.birth_date).toLocaleDateString()}</p>
               <p>Country of Origin: {response.country_of_origin}</p>
               <p>Terms and Conditions: {response.terms_and_conditions ? 'Accepted' : 'Not Accepted'}</p>
             </div>
