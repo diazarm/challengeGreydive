@@ -1,4 +1,7 @@
-
+body {
+  background-color: #ccc;
+  background-size: cover; /* Ajusta la imagen al tamaño de la ventana */
+}
 .container {
     max-width: 600px;
     margin: 0 auto;
@@ -40,7 +43,7 @@
   }
   
   .response {
-    border: 1px solid #ccc;
+    border: 1px solid #111010;
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 4px;

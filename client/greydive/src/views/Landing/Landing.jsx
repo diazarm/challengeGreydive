@@ -4,10 +4,10 @@ import style from "./Landing.module.css";
 const Landing = () => {
     return (
         <div className={style.div}>
-            <h1 className={style.welcome}>Bienvenidos al formulario</h1>
-            <h3 className={style.text}>Uno nunca sabe cuando tiene que generar un formulario..</h3>
+            <h1 className={style.welcome}>Welcome to Survey APP</h1>
+            <h3 className={style.text}>You never know when you need a form..</h3>
             <NavLink to="/home">
-              <button className={style.home}>Ingreso</button>
+              <button className={style.home}>Access here!</button>
           </NavLink>
         </div>
     );
